@@ -1,5 +1,5 @@
 # splitwise-chatbot
-This is a chatbot for splitwise on messenger
+This is a chatbot in FB messager created for Aidha.
 
 
 # How to build
