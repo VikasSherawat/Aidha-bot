@@ -58,27 +58,14 @@ class FacebookMessenger(BaseMessenger):
 
     def sendLoginLink(self,receiverId):
         app.logger.debug("Sending Login Link")
-        url = url_for("pages.splitwiseLogin",_external = True)
         messageData = {
             'recipient': {
                 'id': int(receiverId)
             },
              
             'message': {
-                "attachment":{
-                    "type":"template",
-                    "payload":{
-                        "template_type":"button",
-                        "text":"Please Login to Splitwise",
-                        "buttons":[
-                            {
-                                "type": "account_link",
-                                "url": url
-                            }
-                        ]
+                        "text":"Welcome to Aidha Chat Bot",
                     }
-                },
-            },
         }
         
         res = requests.post(self.messageUrl, json = messageData)

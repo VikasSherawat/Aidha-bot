@@ -6,4 +6,5 @@ flask-login
 splitwise==1.0.0
 apiai==1.2.3
 requests==2.14.2
+middleware==1.2.3
 

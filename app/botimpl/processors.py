@@ -52,3 +52,33 @@ class HelpProcessor:
     def process(self, input):
         app.logger.debug("Processing help request")
         return HelpProcessor.getHelp()
+
+class UnknownProcessor:
+   
+    default_text = "Sorry, i didn't understand."
+    
+    @staticmethod
+    def getHelp():
+        return UnknownProcessor.default_text 
+
+    def __init__(self):
+        pass
+
+
+    def process(self, input):
+        app.logger.debug("Processing help request")
+        return HelpProcessor.getHelp()
+
+class GreetingProcessor:
+    greetings = [
+        "Hey, How can i help you?",
+        "Hello, may i help you in any way?",
+        "Hi, do you need any help?"
+    ]
+
+    def __init__(self):
+        pass
+
+    def process(self, input):
+        app.logger.debug("Processing Greeting Request")
+        return random.choice(GreetingProcessor.greetings)
